@@ -6,7 +6,7 @@
 /*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 03:28:05 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 06:29:54 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 08:32:50 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	argv_to_stack(int argc, char **argv, t_data *data);
 void	free_data(t_data *data);
 void	free_parsed_data(t_data *data);
 void	free_atoi(t_data *data);
+void	free_without_error(t_data *data);
 
 
 /*          parsing.c           */

@@ -6,7 +6,7 @@
 /*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 03:51:13 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 08:19:23 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 08:31:46 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,24 +48,31 @@ void	free_atoi(t_data *data)
 	while (data->str_values[j])
 	{
 		free(data->str_values[j]);
-		data->str_values[j] = NULL;
 		j++;
 	}
 	free (data->str_values);
-	data->str_values = NULL;
-	if (data->stack_a) {
-		free(data->stack_a);
-		data->stack_a = NULL;
+	free(data->stack_a);
+	free(data->sorted);
+	free(data->indexes);
+	free(data);
+	data = NULL;
+	exit (0);
+}
+
+void	free_without_error(t_data *data)
+{
+	int	j;
+
+	j = 0;
+	while (data->str_values[j])
+	{
+		free(data->str_values[j]);
+		j++;
 	}
-	if (data->sorted) {
-		free(data->sorted);
-		data->sorted = NULL;
-	}
-	if (data->indexes) {
-		free(data->indexes);
-		data->indexes = NULL;
-		
-	}
+	free (data->str_values);
+	free(data->stack_a);
+	free(data->sorted);
+	free(data->indexes);
 	free(data);
 	data = NULL;
 	exit (0);

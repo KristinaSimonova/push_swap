@@ -6,7 +6,7 @@
 /*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 04:26:47 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 08:01:49 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 08:32:17 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ static int	get_stack_size(t_data *data)
 	}
 	if (data->stack_a_size == 1)
 	{
-		free_atoi(data);
+		free_without_error(data);
 		exit(0);
 	}
-		// return (1);
 	return (0);
 }
 
