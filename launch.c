@@ -3,28 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   launch.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
+/*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 04:26:47 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 08:32:17 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 10:08:48 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	check_if_sorted(t_data *data, int *ptr)
-{
-	int	i;
-
-	i = 0;
-	while (i < data->stack_a_size)
-	{
-		if (ptr[i] != data->sorted[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
 
 static int	get_stack_size(t_data *data)
 {
@@ -57,7 +43,7 @@ static int	fill_indexes_array(t_data *data)
 		--count;
 		j++;
 	}
-    return (1);
+	return (1);
 }
 
 static int	fill_stack_a(t_data *data)
@@ -76,7 +62,7 @@ static int	fill_stack_a(t_data *data)
 		--count;
 		j++;
 	}
-    return (1);
+	return (1);
 }
 
 static int	fill_sorted_array(t_data *data)
@@ -95,7 +81,7 @@ static int	fill_sorted_array(t_data *data)
 		--count;
 		j++;
 	}
-    return (1);
+	return (1);
 }
 
 void	launch(t_data *data)
@@ -103,7 +89,7 @@ void	launch(t_data *data)
 	get_stack_size(data);
 	fill_indexes_array(data);
 	if (fill_sorted_array(data))
-        insertion_sort(data);
+		insertion_sort(data);
 	parse_duplicates(data);
 	if (check_if_sorted(data, data->indexes) == 0)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   less_five_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
+/*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:48:09 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 06:30:33 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 10:02:23 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,6 @@ static void	sort_five(t_data *data)
 	sort_four(data);
 	push_a(data);
 }
-
 
 void	less_five_sort(t_data *data)
 {

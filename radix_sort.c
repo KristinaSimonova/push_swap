@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
+/*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:11:35 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 05:26:17 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 10:05:04 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,10 @@ static void	nbr_to_index(t_data *data)
 	}
 }
 
-static int max_bits(t_data *data)
+static int	max_bits(t_data *data)
 {
-	int max_num;
-	int max_bits;
+	int	max_num;
+	int	max_bits;
 
 	max_num = data->stack_a_size - 1;
 	max_bits = 0;
@@ -66,12 +66,12 @@ static int max_bits(t_data *data)
 	return (max_bits);
 }
 
-static void radix(t_data *data)
+static void	radix(t_data *data)
 {
-	int size;
-	int i;
-	int j;
-	int num;
+	int	size;
+	int	i;
+	int	j;
+	int	num;
 
 	size = data->stack_a_size;
 	i = 0;

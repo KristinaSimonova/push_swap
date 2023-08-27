@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errors.c                                           :+:      :+:    :+:   */
+/*   check_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 03:32:52 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 09:58:34 by ksimonov         ###   ########.fr       */
+/*   Created: 2023/08/27 10:00:32 by ksimonov          #+#    #+#             */
+/*   Updated: 2023/08/27 10:00:44 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	empty_args(void)
+int	check_if_sorted(t_data *data, int *ptr)
 {
-	write (2, "Error\n", 6);
-	exit (0);
+	int	i;
+
+	i = 0;
+	while (i < data->stack_a_size)
+	{
+		if (ptr[i] != data->sorted[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argv_to_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
+/*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 03:46:50 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 04:23:53 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 09:58:23 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,9 @@ void	argv_to_stack(int argc, char **argv, t_data *data)
 		data->temp_str = data->joined_args;
 		data->joined_args = ft_strjoin(data->temp_str, argv[i]);
 		free (data->temp_str);
-	//	data->str_temp = NULL;
 		data->temp_str = data->joined_args;
 		data->joined_args = ft_strjoin(data->temp_str, " ");
 		free (data->temp_str);
-	//	data->str_temp = NULL;
 		i++;
 	}
 	parse_args(data, data->joined_args);

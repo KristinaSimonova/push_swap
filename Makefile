@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+         #
+#    By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/27 08:20:49 by ksimonov          #+#    #+#              #
-#    Updated: 2023/08/27 08:21:28 by ksimonov         ###   ########.fr        #
+#    Updated: 2023/08/27 10:20:18 by ksimonov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ FILES = argv_to_stack.c \
 		sort_three_cases.c\
 		swap.c\
 		utils.c\
+		check_sort.c\
 
 HEADERS = ./push_swap.h\
 		  ./libft/libft.h\

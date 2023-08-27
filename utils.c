@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
+/*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 04:50:55 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 04:53:46 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 10:07:05 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	edited_atoi(const char *str, t_data *data)
 		data->res = data->res * 10 + str[data->i] - '0';
 		data->i++;
 	}
-	if (!((str[data->i] >= '0' && str[data->i] <= '9') // to remove this line
+	if (!((str[data->i] >= '0' && str[data->i] <= '9')
 			|| (str[data->i] == ' ' || str[data->i] == '\0')))
 		free_atoi(data);
 	if ((data->res * data->sign) > 2147483647
