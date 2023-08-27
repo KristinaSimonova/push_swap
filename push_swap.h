@@ -6,7 +6,7 @@
 /*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 03:28:05 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 10:19:34 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 13:37:49 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ int		case2(t_data *data);
 int		case3(t_data *data);
 int		case4(t_data *data);
 int		case5(t_data *data);
+void	free_without_b_data(t_data *data);
 
 #endif

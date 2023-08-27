@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
+/*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:34:26 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 05:38:14 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 13:34:56 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,20 @@ static void	add_to_stack_b(t_data *data)
 
 	count = 0;
 	data->stack_temp = (int *)malloc(sizeof(int) * (data->stack_b_size));
+	if(!data->stack_temp)
+	{
+		free_data(data);
+		exit (0);
+	}
+	
 	while (count < (data->stack_b_size))
 	{
 		data->stack_temp[count] = data->stack_b[count];
 		count++;
 	}
 	free(data->stack_b);
-	data->stack_b = (int *)malloc(sizeof(int) * (data->stack_b_size + 1));
+	if (data->stack_b_size > 1)
+		data->stack_b = (int *)malloc(sizeof(int) * (data->stack_b_size + 1));
 	if (!data->stack_b)
 		return ;
 	data->stack_top = 0;

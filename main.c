@@ -6,7 +6,7 @@
 /*   By: ksimonov <ksimonov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 03:27:31 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 10:02:33 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 13:35:45 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ int	main(int argc, char **argv)
 	if (!data)
 		return (1);
 	argv_to_stack(argc, argv, data);
-	free_data(data);
+	free_withou_b_data(data);
 }
