@@ -6,7 +6,7 @@
 /*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 04:00:29 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 05:05:06 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 07:25:21 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	parse_args(t_data *data, char *str)
 	{
         if(check_signs(str, i) == 0 || check_digits(str, i) == 0)
 		    i++;
-        else //to be checked
+        else
             {
                 write(2, "Error/n", 6);
                 free_parsed_data(data);

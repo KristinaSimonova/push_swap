@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/08/27 08:20:49 by ksimonov          #+#    #+#              #
+#    Updated: 2023/08/27 08:21:28 by ksimonov         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = push_swap
 
 FILES = argv_to_stack.c \
@@ -28,7 +40,7 @@ CC = gcc
 all: $(NAME)
 $(NAME): $(OBJ)
 	make -C ./libft all
-	$(CC) -g $(FILES) $(FLAGS) ./libft/libft.a -o push_swap
+	$(CC) $(FILES) $(FLAGS) ./libft/libft.a -o push_swap
 
 clean:
 	make -C ./libft clean
@@ -38,5 +50,3 @@ fclean: clean
 	make -C ./libft fclean
 	rm -rf push_swap
 re: fclean all
-
-.PHONY: all clean fclean re

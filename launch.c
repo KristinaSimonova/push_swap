@@ -6,7 +6,7 @@
 /*   By: ksimonov <ksimonov@student.42.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 04:26:47 by ksimonov          #+#    #+#             */
-/*   Updated: 2023/08/27 06:57:49 by ksimonov         ###   ########.fr       */
+/*   Updated: 2023/08/27 08:01:49 by ksimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,11 @@ static int	get_stack_size(t_data *data)
 		data->stack_a_size++;
 	}
 	if (data->stack_a_size == 1)
-		return (1); //change to exit (0)
+	{
+		free_atoi(data);
+		exit(0);
+	}
+		// return (1);
 	return (0);
 }
 
@@ -103,7 +107,10 @@ void	launch(t_data *data)
         insertion_sort(data);
 	parse_duplicates(data);
 	if (check_if_sorted(data, data->indexes) == 0)
+	{
 		free_data(data);
+		exit(0);
+	}
 	if (data->stack_a_size > 5)
 		radix_sort(data);
 	else
