@@ -30,8 +30,7 @@ static void	add_to_stack_b(t_data *data)
 		count++;
 	}
 	free(data->stack_b);
-	if (data->stack_b_size > 1)
-		data->stack_b = (int *)malloc(sizeof(int) * (data->stack_b_size + 1));
+	data->stack_b = (int *)malloc(sizeof(int) * (data->stack_b_size + 1));
 	if (!data->stack_b)
 		return ;
 	data->stack_top = 0;

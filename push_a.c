@@ -51,7 +51,8 @@ static void	from_b_to_a(t_data *data)
 		data->stack_top++;
 	}
 	free(data->stack_b);
-	data->stack_b = (int *)malloc(sizeof(int) * (data->stack_b_size - 1));
+	if (data->stack_b_size > 1)
+		data->stack_b = (int *)malloc(sizeof(int) * (data->stack_b_size - 1));
 	if (!data->stack_b)
 		return ;
 	data->stack_b_size--;

@@ -30,5 +30,5 @@ int	main(int argc, char **argv)
 	if (!data)
 		return (1);
 	argv_to_stack(argc, argv, data);
-	free_withou_b_data(data);
+	free_without_b_data(data);
 }
